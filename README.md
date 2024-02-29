@@ -1,35 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+For this project, I decided to utilize the RESTful endpoint provided by the Rick & Morty API instead of GraphQL.
+This decision was based on several factors that I considered during the planning phase of the project.
 
-## Getting Started
+1. Familiarity and Ease of Use:
+REST APIs follow a more familiar and widely adopted architectural style, making it easier for developers to understand and work with.
+Given the relatively simple data requirements of my application, I felt that a RESTful approach would provide a straightforward and efficient solution without the added complexity of GraphQL.
 
-First, run the development server:
+2. Suitability of Data Structure:
+The structure of the data provided by the Rick & Morty API aligns well with the request-response model of REST. Each endpoint corresponds to a specific resource (e.g., characters, locations, episodes), allowing me to fetch the required data with simple HTTP requests.
+While GraphQL offers more flexibility in querying nested data and specifying exactly what fields to retrieve, I determined that the predefined structure of the REST API endpoints sufficiently met my project's needs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+3. Performance Considerations:
+For my application's use case, where I primarily retrieve information about locations, residents, and episodes, the performance benefits of GraphQL's query optimization may not have been significant.
+By using REST, I was able to leverage caching mechanisms and optimize individual API requests to minimize latency and improve overall performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# SHAMIRI-INSTITUTE-Rick-and-morty-TASK-" 
+4. Development Stack Compatibility:
+Given my preference for TypeScript, Next.js, and tailwindcss for full-stack projects, I chose a technology stack that aligns well with REST API consumption.
+While GraphQL can be integrated with these technologies, I opted for a simpler and more streamlined development process by sticking with REST.
+In summary, my decision to use the RESTful endpoint of the Rick & Morty API was based on considerations of familiarity, data structure suitability, performance, and compatibility with my chosen development stack. 
+While GraphQL offers advantages in certain scenarios, I believe that REST provided a pragmatic solution for the requirements of my project.
